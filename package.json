@@ -1,6 +1,6 @@
 {
   "name": "@bitmorest/bootstrap-grid",
-  "description": "The bootstrap grid only without root and reset",
+  "description": "The bootstrap 5 - grid only without root and reset",
   "version": "0.0.1",
   "repository": {
     "type": "git",
