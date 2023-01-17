@@ -19,7 +19,7 @@ with html
 or with scss
 
 ```scss
-@import "@bitmorest/bootstrap-grid/scss/bootstrap-grid";
+@import "@bitmorest/bootstrap-grid/scss";
 ```
 
 or you can import partial file for overwrite variables like the bootstrap

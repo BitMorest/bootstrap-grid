@@ -12,17 +12,16 @@
     "url": "https://github.com/johnitvn",
     "email": "john.itvn@gmail.com"
   },
-  "main": "css/bootstrap.css",
-  "sass": "scss/bootstrap.scss",
-  "style": "css/bootstrap.css",
+  "sass": "scss/index.scss",
+  "style": "css/bootstrap-grid.css",
   "license": "MIT",
   "scripts": {
     "prepare": "husky install",
     "lint": "stylelint \"**/*.scss\"",
     "release": "yarn publish --access=public",
     "build": "run-p -l build:css build:minify",
-    "build:css": "sass ./scss/bootstrap-grid.scss ./css/bootstrap-grid.css --load-path=./node_modules",
-    "build:minify": "sass ./scss/bootstrap-grid.scss ./css/bootstrap-grid.min.css --load-path=./node_modules --style compressed",
+    "build:css": "sass ./scss/index.scss ./css/bootstrap-grid.css --load-path=./node_modules",
+    "build:minify": "sass ./scss/index.scss ./css/bootstrap-grid.min.css --load-path=./node_modules --style compressed",
     "prepublishOnly": "yarn build"
   },
   "files": [
