@@ -1,10 +1,10 @@
 {
-  "name": "@johnitvn/bootstrap-grid",
+  "name": "@bitmorest/bootstrap-grid",
   "description": "The bootstrap grid only without root and reset",
   "version": "0.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/BitMorest/execute"
+    "url": "https://github.com/BitMorest/bootstrap-grid"
   },
   "author": {
     "name": "John Martin",
@@ -15,11 +15,21 @@
   "style": "css/bootstrap.css",
   "license": "MIT",
   "scripts": {
+    "prepare": "husky install",
     "lint": "stylelint \"**/*.scss\"",
-    "build": "sass ./scss/bootstrap-grid.scss ./css/bootstrap-grid.css --load-path=./node_modules",
+    "build": "run-p -l build:css build:minify",
+    "build:css": "sass ./scss/bootstrap-grid.scss ./css/bootstrap-grid.css --load-path=./node_modules",
+    "build:minify": "sass ./scss/bootstrap-grid.scss ./css/bootstrap-grid.min.css --load-path=./node_modules --style compressed",
     "prepublishOnly": "yarn build"
   },
+  "files": [
+    "scss/**/*",
+    "css/**/*",
+    "README.md",
+    "package.json"
+  ],
   "devDependencies": {
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.4.21",
     "postcss-scss": "^4.0.6",
     "sass": "^1.57.1"
